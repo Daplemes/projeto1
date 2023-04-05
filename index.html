@@ -5,11 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tutorial web</title>
+
+    <link rel="stylesheet" href="/src/css/reset.css">
+    <link rel="stylesheet" href="/src/css/estilos.css">
+    
 </head>
 <body>
-    <h1>Tutorial Web Prático</h1>
-    <p>Aprenda como esse site foi criado</p>
+    <header>
+        <h1>Tutorial Web Prático</h1>
+        <nav>
+            <a href navegacao="/src/paginas/entrada.html"> Home </a>
+            <a href navegacao="/src/paginas/tutoriais.html"> Tutoriais</a>
+            <a href navegacao="/src/paginas/videos.html"> Videos </a>
+        </nav>
+    </header>
+    
+    <section id="conteudo" >
+    <!-- o conteudo será mostrado nessa parte conforme selecionamos as paginas -->
+    </section>
+    <footer>
+        <ul>
+            <li>
+                <a href="https://github.com/Daplemes" target="_blank" class="icone">
+                    <img src="/src/imagens/github-mark.svg" alt="Github">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/daniel-pereira-597774263/" target="_blank" class="icone">
+                    <img src="/src/imagens/linkedin-in.svg" alt="LinkedIn">
+                </a>
+            </li>
+        </ul>
+    </footer>
+    <script>
+        fetch("/src/paginas/entrada.html")
+                    .then(resp => resp.text())
+                    .then(html => conteudo.innerHTML = html)
+        document.querySelectorAll('[navegacao]').forEach(link => {
+            const conteudo = document.getElementById('conteudo')
+            
+            link.onclick = function(e) {
+                e.preventDefault()
+                debugger
+                fetch(link.getAttribute('navegacao'))
+                    .then(resp => resp.text())
+                    .then(html => conteudo.innerHTML = html)
+            }
+        })
+    </script>
 </body>
 </html>
-
-<!-- to só fazendo um teste -->

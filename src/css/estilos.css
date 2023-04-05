@@ -1,0 +1,83 @@
+header{
+    background-color: #1d2630;
+    display: flex;
+    flex-direction: column;
+}
+
+header h1{
+    margin-top: 10px;
+    margin-left: 8%;
+    margin-bottom: 5px;
+    color: white;
+    font-size: 50px;
+}
+
+header nav{
+    height: 40px;
+    /* margin-bottom: 10px; */
+    /* margin-left: 20px; */
+    display: flex;
+    width: 80wv;
+}
+
+header nav a{
+    padding: 10px 0px 5px 20px;
+    width: 15%;
+    color: white;
+    border-style: ridge;
+    border-color: #1d2630;
+}
+
+body{
+    background-color: #263340;
+    color: white;
+}
+
+#conteudo{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#conteudo h1{
+    color: gray;
+    font-size: 40px;
+    margin-left: 10px;
+}
+
+#conteudo p{
+    font-size: 20px;
+}
+
+footer{
+    background-color: #1d2630;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: left; */
+    align-items: center;
+    height: 15%;
+    /* display: none; */
+}
+footer ul{
+    margin-left: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+footer .icone{
+    display: block;
+    width: 30px;
+    filter: invert(1);
+    transition: 0.3s ease-in-out;
+}
+
+footer .icone:hover{
+    transform: scale(1.2);
+
+}
