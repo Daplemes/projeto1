@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="/src/css/reset.css">
     <link rel="stylesheet" href="/src/css/estilos.css">
+    <!-- <link rel="stylesheet" href="/src/css/tree.css"> -->
     
 </head>
 <body>
@@ -24,18 +25,20 @@
     <!-- o conteudo será mostrado nessa parte conforme selecionamos as paginas -->
     </section>
     <footer>
-        <ul>
-            <li>
-                <a href="https://github.com/Daplemes" target="_blank" class="icone">
-                    <img src="/src/imagens/github-mark.svg" alt="Github">
-                </a>
-            </li>
-            <li>
-                <a href="https://www.linkedin.com/in/daniel-pereira-597774263/" target="_blank" class="icone">
-                    <img src="/src/imagens/linkedin-in.svg" alt="LinkedIn">
-                </a>
-            </li>
-        </ul>
+        <!-- <ul> -->
+            <ul id="perfil">
+                <li>
+                    <a href="https://github.com/Daplemes" target="_blank" class="icone">
+                        <img src="/src/imagens/github-mark.svg" alt="Github">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/daniel-pereira-597774263/" target="_blank" class="icone">
+                        <img src="/src/imagens/linkedin-in.svg" alt="LinkedIn">
+                    </a>
+                </li>
+            </ul>
+        <!-- </ul> -->
     </footer>
     <script>
         fetch("/src/paginas/entrada.html")
@@ -46,7 +49,7 @@
             
             link.onclick = function(e) {
                 e.preventDefault()
-                debugger
+                // debugger
                 fetch(link.getAttribute('navegacao'))
                     .then(resp => resp.text())
                     .then(html => conteudo.innerHTML = html)

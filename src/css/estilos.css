@@ -17,24 +17,30 @@ header nav{
     /* margin-bottom: 10px; */
     /* margin-left: 20px; */
     display: flex;
-    width: 80wv;
+    /* width: 80wv; */
 }
 
 header nav a{
     padding: 10px 0px 5px 20px;
-    width: 15%;
+    width: 20%;
     color: white;
     border-style: ridge;
     border-color: #1d2630;
+    /* transition: 0.3s ease-in-out; */
 }
 
+/* header nav a:hover{
+    transform: scale(1.2);
+} */
+    
 body{
     background-color: #263340;
     color: white;
 }
 
 #conteudo{
-    margin-left: 20px;
+    margin-left: 7%;
+    margin-right: 7%;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -50,23 +56,36 @@ body{
     font-size: 20px;
 }
 
+#conteudo h2{
+    color: gray;
+    font-size: 30px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
 footer{
     background-color: #1d2630;
     position: fixed;
     bottom: 0;
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     /* justify-content: left; */
-    align-items: center;
+    /* align-items: center; */
     height: 15%;
     /* display: none; */
 }
 footer ul{
-    margin-left: 25px;
+    margin: 10px 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#perfil{
+    /* background-color: red; */
     display: flex;
     flex-direction: column;
-    gap: 10px;
 }
 
 
@@ -79,5 +98,20 @@ footer .icone{
 
 footer .icone:hover{
     transform: scale(1.2);
-
 }
+
+/* footer .logo{
+    margin-left: 20px;
+    display: block;
+    width: 50px;
+} */
+
+/* aside{
+    background-color: red;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    left: 0;
+    width: 7%;
+
+} */
